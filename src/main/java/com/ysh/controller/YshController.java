@@ -10,6 +10,6 @@ public class YshController {
 
     @GetMapping(value = "/firstQuery")
     public String firstQuery(){
-        return "firstQuery";
+        return "firstQuery1";
     }
 }
