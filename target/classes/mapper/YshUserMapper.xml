@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybaits.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ysh.dao.YshUserDao">
+    <sql id="userFiled">
+        a.id as "id",
+        a.username as "name",
+        a.password as "password"
+    </sql>
+    <!--获取所有用户-->
+    <select id="findAll" resultType="com.ysh.model.YshUser">
+        select
+        <include refid="userFiled"/>
+        from user_ysh as a
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.ysh.model.YshUser">
+        insert into user_ysh(username, password) VALUE (#{name}, #{password});
+    </insert>
+</mapper>
