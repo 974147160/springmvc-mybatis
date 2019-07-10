@@ -9,4 +9,5 @@ public class YshCar implements Serializable {
     private String carNo;
     private String carType;
     private String carColor;
+    private String carPerId;
 }

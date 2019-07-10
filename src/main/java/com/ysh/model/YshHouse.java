@@ -8,4 +8,5 @@ import java.io.Serializable;
  */
 public class YshHouse implements Serializable {
     private static final long serialVersionUID = 6737215599585038982L;
+    private String id;
 }
